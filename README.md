@@ -36,10 +36,8 @@ Presente anche nel file delle configurazioni di Django la sezione con la paramet
 
 ## Database
 
-Si utilizza come standard per la restituzione dei dati il formato JSON. I dati sono memorizzati localmente su un database SQLIite
-
-  
-
+Si utilizza come standard per la restituzione dei dati il formato JSON. I dati sono memorizzati localmente su un database SQLIite 
+Sono presenti anche i due database utilizzati per la gestione dell'ambiente (db.sqlite3) e per i test di copetura (.coverage).
 L’accesso alle API deve essere effettuato con credenziali abilitate, le credenziali sono memorizzate a livello di database e file sessione utente.
 
 ## **Feature API**
