@@ -55,8 +55,8 @@ Si è scelto di utilizzare DjangoRestFramework data la presenza di documentazion
 ***Parametri chiamata***
 
 
-|parametri filtro |Esempio  | 
-|--|--|--|
+|parametri filtro |Esempio| 
+|--|--|
 |?data (formato YYYY-MM-DD): **gte:** grande più di **lte:** piu piccolo d | es. ordini tra due date - `GET /orders?gte=2024-06-16&&lte=2024-06-17`: | i |
 | nome  (formato stringa): **name** | es. filtro ordini contente nel nome ‘pro”: `GET /orders?name=pro` |
 |descrizione (formato stringa): **des** | es. filtro ordini contente nel  nome ‘pro”: `GET /orders?desc=pro`
