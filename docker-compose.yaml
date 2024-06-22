@@ -1,0 +1,37 @@
+version: '3'
+services:
+#  db:
+#    image: mysql:5.7
+#    platform: linux/amd64
+#    container_name: illiad_api_db
+#    restart: always
+#    volumes:
+#      - data:/var/lib/mysql
+#    environment:
+#      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+#      MYSQL_DATABASE: ${MYSQL_DATABASE}
+#      MYSQL_USER: ${MYSQL_USER}
+#      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+#    ports:
+#      - "3306:3306"
+#    healthcheck:
+#      test: ["CMD", "mysql", "-h", "localhost", "-u", "root", "-p${DB_ROOT_PASSWORD}", "-e", "SELECT 1"]
+#      timeout: 20s
+#      retries: 10
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: illiad
+    command: sh -c "python3 manage.py migrate  && python3 manage.py collectstatic && python3 manage.py runserver 0.0.0.0:8000 "
+    restart: always
+    volumes:
+      - .:/EnpointAPI
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+
+volumes:
+  data:
