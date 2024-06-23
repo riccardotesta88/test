@@ -33,15 +33,15 @@ class OrderModelTest(TestCase):
     def test_string_record_order(self):
         '''Verifica stringa testo voce record modello Order'''
         data = self.serializer.data
-        print('\n\n\n###SERIAL- ORDER')
-        print(data)
+        # print('\n\n\n###SERIAL- ORDER')
+        # print(data)
         serial_string='%s - %s'%(data['name'],data['date'])
         self.assertEquals(self.order.__str__(), serial_string)
 
     def test_string_record_product(self):
         '''Verifica stringa testo voce record modello Product'''
         data = self.serializer_prod.data
-        print('\n\n\n###SERIAL PRODUCT')
-        print(data)
+        # print('\n\n\n###SERIAL PRODUCT')
+        # print(data)
         serial_string='%s - %s'%(data['name'],data['price'])
         self.assertEquals(self.product.__str__(), serial_string)

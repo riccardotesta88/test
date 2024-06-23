@@ -18,14 +18,11 @@ class OrderSerializerTest(TestCase):
         '''Verifica dei dati serializzati dalle classi del modello Order'''
         #Verifica creazione nuovo oggetto
 
-
         order = Order.objects.create(**self.order_attr)
         order.products.add(Product.objects.create(**self.prod_attr))
         serializer = OrderSerializer(instance=order)
         data = serializer.data
-
         print(data)
-
         #Controllo campi
         self.assertEqual(set(data.keys()), set(['ID','date','products','name', 'description']))
 
