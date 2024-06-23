@@ -67,8 +67,10 @@ Utilizzando i parametri anche in cascata nel seguente ordine di precedenza data 
 | url | descrizione |
 |--|--|
 | GET /order/detail/<id:int>/ | dettaglio singolo ordine |
-| PUSH /order/detail/<id:int>/ | modifica dati ordine |
+| PUSH /order/detail/<id:int>/ | modifica tutti dati ordine |
+| PATCH /order/detail/<id:int>/ | modifica dati ordine parziali|
 |  DELETE /order/detail/<id:int>/| elimina voce ordine |
+
 
 -----------    
 **PRODUCT**
@@ -79,7 +81,8 @@ Utilizzando i parametri anche in cascata nel seguente ordine di precedenza data 
 | GET /product | lista prodotti, indicazione della paginazione come da file di configurazione di Django|
 | GET /product/id:int |dettaglio prodotto singolo per associazine dati ordini|
 |  DELETE /order/detail/<id:int>/| elimina voce ordine |
-  
+
+ **https://www.django-rest-framework.org/api-guide/routers/#defaultrouter** 
  
 
 ## Sviluppo
